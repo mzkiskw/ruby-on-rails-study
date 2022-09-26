@@ -5,6 +5,8 @@ services:
     build:
       context: ./
       dockerfile: docker/ruby/Dockerfile
+    volumes:
+      - ./:/app:cached
     depends_on:
       - mysql
 

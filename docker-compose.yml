@@ -6,3 +6,8 @@ services:
     environment:
       - MYSQL_DATABASE=study_rails
       - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql-volume:/var/lib/mysql:rw
+
+volumes:
+  mysql-volume:

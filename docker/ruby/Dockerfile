@@ -7,3 +7,8 @@ RUN apt-get update && \
     rm -rf ~/.cache && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+COPY Gemfile /app/Gemfile
+COPY Gemfile.lock /app/Gemfile.lock
+
+RUN bundle install

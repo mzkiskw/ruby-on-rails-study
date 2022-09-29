@@ -27,6 +27,9 @@ services:
     build:
       context: ./
       dockerfile: ./docker/node/Dockerfile
+    command: yarn dev
+    ports:
+      - "3000:3000"
     volumes:
       - ./:/app:cached
     depends_on:

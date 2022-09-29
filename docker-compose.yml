@@ -23,5 +23,14 @@ services:
     volumes:
       - mysql-volume:/var/lib/mysql:rw
 
+  node:
+    build:
+      context: ./
+      dockerfile: ./docker/node/Dockerfile
+    volumes:
+      - ./:/app:cached
+    depends_on:
+      - ruby
+
 volumes:
   mysql-volume:

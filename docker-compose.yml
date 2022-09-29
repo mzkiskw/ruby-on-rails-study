@@ -5,10 +5,10 @@ services:
     build:
       context: ./
       dockerfile: docker/ruby/Dockerfile
-    command: bin/rails server -b 0.0.0.0 -p 3000
+    command: bin/rails server -b 0.0.0.0 -p 8000
     tty: true
     ports:
-      - "3000:3000"
+      - "8000:8000"
     volumes:
       - ./:/app:cached
     depends_on:

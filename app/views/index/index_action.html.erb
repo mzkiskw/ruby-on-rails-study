@@ -1,1 +1,10 @@
-<p>Hello! rails!</p>
+<p>Task list</p>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <%= task.title %>
+      <%= task.is_completed %>
+    </li>
+  <% end %>
+</ul>

@@ -6,5 +6,5 @@
   <li>createdAt: <%= @task.created_at %></li>
 </ul>
 
-<a href="<%= root_path %>">HOME</a>
-<a href="<%= tasks_path %>">task list</a>
+<%= link_to "HOME", root_path %>
+<%= link_to "Task List", tasks_path %>

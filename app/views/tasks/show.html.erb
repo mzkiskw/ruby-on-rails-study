@@ -1,0 +1,10 @@
+<h1>タスクの詳細</h1>
+
+<ul>
+  <li>title: <%= @task.title %></li>
+  <li>isCompleted: <%= @task.is_completed %></li>
+  <li>createdAt: <%= @task.created_at %></li>
+</ul>
+
+<a href="<%= root_path %>">HOME</a>
+<a href="<%= tasks_path %>">task list</a>

@@ -3,7 +3,5 @@ Rails.application.routes.draw do
 
   root "index#index_action"
 
-  get "/", to: "index#index_action"
-  get "/task", to: "index#index_action"
-  get "/task/:id", to: "index#show_action"
+  resources :tasks
 end

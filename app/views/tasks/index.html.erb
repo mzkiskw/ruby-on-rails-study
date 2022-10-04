@@ -1,0 +1,13 @@
+<h1>Task list</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <a href="<%= task_path(task) %>">
+        <%= task.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<a href="<%= root_path %>">HOME</a>

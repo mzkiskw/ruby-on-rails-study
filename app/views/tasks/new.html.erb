@@ -4,6 +4,9 @@
   <div>
     <%= form.label :title %>
     <%= form.text_field :title %>
+    <% @task.errors.full_messages_for(:title).each do |message| %>
+      <div style="color: red"><%= message %></div>
+    <% end %>
   </div>
 
   <div>
